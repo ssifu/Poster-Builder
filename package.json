@@ -1,0 +1,15 @@
+{
+  "name": "poster-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".src/handlers/eventHandlers.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
