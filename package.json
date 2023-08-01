@@ -2,14 +2,18 @@
   "name": "poster-builder",
   "version": "1.0.0",
   "description": "",
-  "main": ".src/handlers/eventHandlers.js",
+  "main": "src/handlers/eventHandlers.js",
   "scripts": {
-    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "parcel": "^2.9.3",
+    "parcel-bundler": "^1.12.5",
     "tailwindcss": "^3.3.3"
   }
 }
