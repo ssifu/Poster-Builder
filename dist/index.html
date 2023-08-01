@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Builder</title>
+    <link rel="stylesheet" href="/styles.8986bff4.css">
+  <script src="/styles.8986bff4.js"></script></head>
+  <body class="bg-gray-200 font-sans">
+    <div class="container mx-auto h-screen px-4 py-8">
+      <div class="grid grid-cols-2 gap-8 h-full">
+        <!-- Component Section (Left) -->
+
+        <div id="component" class="flex flex-col gap-6 pt-10 px-4 border-2 border-slate-400 rounded-2xl relative">
+          <span class="absolute text-center left-1/2 w-11/12 top-0 -translate-x-1/2 -translate-y-1/2 rounded border-t-2 bg-white px-2 py-1 font-bold text-2xl text-black">
+            <svg class="w-8 h-8 absolute translate-x-56" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.64855 5.36234 3.6059 5.9095 2.95969 6.64132L12 11.1615L21.0403 6.64132C20.3941 5.9095 19.3515 5.36234 17.5777 4.43152Z" fill="#000000"></path>
+                <path d="M21.7484 7.96435L12.75 12.4635V21.904C13.4679 21.7252 14.2848 21.2965 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C22 15.8458 22 14.5833 22 12.0585V11.9415C22 10.0489 22 8.86558 21.7484 7.96435Z" fill="#000000"></path>
+                <path d="M11.25 21.904V12.4635L2.25164 7.96434C2 8.86557 2 10.0489 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C9.71524 21.2965 10.5321 21.7252 11.25 21.904Z" fill="#000000"></path>
+              </g>
+            </svg>
+            Component
+          </span>
+
+          <div id="items" class="flex flex-col gap-2 order-last items-center">
+            <h1 class="text-xl text-black font-bold self-center">Items</h1>
+            <div id="items-button-container" class="flex gap-1 w-full justify-between">
+              <button id="item-heading" class="bg-yellow-200 text-yellow-600 outline-none font-semibold w-full py-2 rounded hover:bg-yellow-300 hover:text-yellow-800 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm transition ease-in-out duration-300">
+                Heading
+              </button>
+              <button id="item-image" class="bg-green-200 text-green-600 outline-none font-semibold w-full py-2 rounded hover:bg-green-300 hover:text-green-800 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm transition ease-in-out duration-300">
+                Image
+              </button>
+              <button id="item-description" class="bg-blue-200 text-blue-600 outline-none font-semibold w-full py-2 rounded hover:bg-blue-300 hover:text-blue-800 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm transition ease-in-out duration-300">
+                Description
+              </button>
+            </div>
+          </div>
+
+          <!-- Heading Section -->
+
+          <div id="component-heading" class="hidden px-2 pt-1 pb-2 border-2 border-slate-500 rounded-lg relative gap-2">
+            <div>
+              <span class="absolute top-0 left-0 transform translate-x-3 -translate-y-3 rounded-md bg-gray-400 text-white font-bold px-2">
+                Heading
+              </span>
+            </div>
+            <button id="heading-close-button" class="font-bold rounded-full bg-white px-2 outline-none text-red-600 text-lg py-1 absolute right-0 transform -translate-y-6 translate-x-3 hover:bg-red-600 hover:text-white transition ease-in-out duration-300">
+              X
+            </button>
+            <input id="heading-input" type="text" class="w-full h-8 rounded-md px-3 py-2 border-none mt-8">
+            <div class="flex justify-between mb-1">
+              <div class="inline-flex roundec-md shadow-md" role="group">
+                <button id="align-left" type="button" class="inline-flex items-center px-2 py-1 text-xs font-bold text-gray-900 bg-gray-50 outline-none border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 transition ease-in-out duration-300">
+                  <svg class="w-3 h-3 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h2v16H0V0zm4 9h12v2H4V9zm0-4h10v2H4V5zm0-4h12v2H4V1zm0 12h10v2H4v-2z" fill-rule="evenodd"></path>
+                  </svg>
+                  Left
+                </button>
+                <button id="align-center" type="button" class="inline-flex justify-center items-center px-2 py-1 text-xs font-bold text-gray-900 bg-white outline-none border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 transition ease-in-out duration-300">
+                  <svg fill="currentColor" aria-hidden="true" class="w-3 h-3 mr-2" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h8v-1h-8zm0 2v1h8v-1h-8zm0 2v1h8v-1h-8zm1 2v1h6v-1h-6z"></path>
+                  </svg>
+                  Center
+                </button>
+                <button id="align-right" type="button" class="inline-flex items-center px-2 py-1 text-xs font-bold text-gray-900 bg-white outline-none border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 transition ease-in-out duration-300">
+                  <svg class="w-3 h-3 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0h-2v16h2V0zm-4 9H0v2h12V9zm0-4H2v2h10V5zm0-4H0v2h12V1zm0 12H2v2h10v-2z" fill-rule="evenodd"></path>
+                  </svg>
+                  Right
+                </button>
+              </div>
+              <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button id="color-red" type="button" class="inline-flex items-center px-4 py-1 text-xs font-bold text-red-600 bg-red-200 outline-none border border-gray-200 rounded-l-lg hover:bg-red-600 hover:text-white hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-red-600 focus:bg-red-600 focus:text-white transition ease-in-out duration-300">
+                  Red
+                </button>
+                <button id="color-green" type="button" class="inline-flex items-center px-4 py-1 text-xs font-bold text-green-600 bg-green-200 outline-none border-t border-b border-gray-200 hover:bg-green-600 hover:text-white hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-green-600 focus:bg-green-600 focus:text-white transition ease-in-out duration-300">
+                  Green
+                </button>
+                <button id="color-blue" type="button" class="inline-flex items-center px-4 py-1 text-xs font-bold text-blue-600 bg-blue-200 outline-none border border-gray-200 rounded-r-md hover:bg-blue-600 hover:text-white hover:scale-y-105 hover:scale-x-105 hover:shadow-sm focus:z-10 focus:ring-2 focus:ring-blue-600 focus:bg-blue-600 focus:text-white transition ease-in-out duration-300">
+                  Blue
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster Image Section -->
+
+          <div id="component-poster_image" class="hidden px-4 pb-4 pt-4 border-2 border-slate-500 rounded-xl relative">
+            <div>
+              <span class="absolute top-0 left-0 transform translate-x-3 -translate-y-3 rounded-md bg-gray-400 text-white font-bold px-2">Poster Image</span>
+            </div>
+            <button id="poster-image-close-button" class="font-bold rounded-full bg-white px-2 text-red-600 outline-none text-lg py-1 absolute right-0 transform -translate-y-9 translate-x-3 hover:bg-red-600 hover:text-white transition ease-in-out duration-300">
+              X
+            </button>
+
+            <div id="upload-image" class="flex items-center justify-center w-full hover:bg-gray-200">
+              <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50">
+                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                  <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"></path>
+                  </svg>
+                  <p class="mb-2 text-sm">
+                    <span class="font-semibold">Click to upload</span> or drag
+                    and drop
+                  </p>
+                  <p class="text-sm">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                </div>
+                <input id="dropzone-file" type="file" class="hidden" accept="image/png, image/jpg, image/jpeg">
+              </label>
+            </div>
+          </div>
+          <!-- Description Section -->
+
+          <div id="component-description" class="hidden px-2 pb-2 border-2 border-slate-500 rounded-xl relative">
+            <div>
+              <span class="absolute top-0 left-0 transform translate-x-3 -translate-y-3 rounded-md bg-gray-400 text-white font-bold px-2">
+                Description
+              </span>
+            </div>
+            <textarea id="description-input" name="desctiption" cols="30" rows="4" class="mt-8 rounded w-full bg-gray-50 border-2 border-gray-400 p-2 text-sm"></textarea>
+            <button id="desctiption-close-button" class="font-bold rounded-full bg-white px-2 text-red-600 outline-none text-lg py-1 absolute right-0 transform -translate-y-3 translate-x-3 hover:bg-red-600 hover:text-white transition ease-in-out duration-300">
+              X
+            </button>
+          </div>
+        </div>
+
+        <!-- Preview Section (Right) -->
+        <div id="preview" class="flex flex-col gap-4 pt-10 px-4 justify-start border-2 border-slate-400 rounded-2xl relative">
+          <span class="absolute text-center left-1/2 w-11/12 top-0 -translate-x-1/2 -translate-y-1/2 rounded border-t-2 bg-white px-2 py-1 font-bold text-2xl text-black">
+            <svg fill="#000000" version="1.1" id="Layer_1" class="w-8 h-8 absolute translate-x-60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480.606 480.606" xml:space="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <rect x="85.285" y="192.5" width="200" height="30"></rect>
+                  <path d="M439.108,480.606l21.213-21.213l-71.349-71.349c12.528-16.886,19.949-37.777,19.949-60.371 c0-40.664-24.032-75.814-58.637-92.012V108.787L241.499,0H20.285v445h330v-25.313c6.188-2.897,12.04-6.396,17.475-10.429 L439.108,480.606z M250.285,51.213L299.072,100h-48.787V51.213z M50.285,30h170v100h100v96.957 c-4.224-0.538-8.529-0.815-12.896-0.815c-31.197,0-59.148,14.147-77.788,36.358H85.285v30h126.856 c-4.062,10.965-6.285,22.814-6.285,35.174c0,1.618,0.042,3.226,0.117,4.826H85.285v30H212.01 c8.095,22.101,23.669,40.624,43.636,52.5H50.285V30z M307.389,399.208c-39.443,0-71.533-32.09-71.533-71.533 s32.089-71.533,71.533-71.533s71.533,32.089,71.533,71.533S346.832,399.208,307.389,399.208z"></path>
+                </g>
+              </g>
+            </svg>
+            Preview
+          </span>
+          <!-- Title -->
+          <h1 id="preview-title" class="text-5xl h-24 break-words whitespace-pre-wrap overflow-auto"></h1>
+
+          <!-- Image -->
+          <div id="preview-image-container" class="invisible w-full h-60 border-2 border-gray-500">
+            <img id="preview-image" src="/curry.95a2c877.jpg" alt="Picture of Curry" class="object-cover w-full h-full">
+          </div>
+
+          <!-- Description -->
+          <div id="preview-description" class="w-full h-32 border-2 whitespace-pre-wrap break-words overflow-auto text-lg"></div>
+
+          <!-- Download Button -->
+          <button id="download-button" class="self-start bg-gray-500 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center transition ease-in-out duration-300">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path>
+            </svg>
+            <span>Download</span>
+          </button>
+          <canvas id="poster-canvas" class="hidden"></canvas>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/eventHandlers.45072ac1.js" defer=""></script>
+  </body>
+</html>
